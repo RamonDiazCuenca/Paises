@@ -22,9 +22,14 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    
+
     <string name="PreferenceCategory">Apariencia</string>
     <string name="ListPreference">Formato del listado</string>
     <string name="SwitchPreference">Mostrar línea de separación entre elementos del listado</string>
+    <string name="de_que_pais_es_la_bandera">¿Que pais es la bandera?</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="juego">¡Juega!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
