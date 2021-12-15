@@ -6,15 +6,16 @@
 
         <SwitchPreference
             android:defaultValue="false"
-            android:key="switch_preference_1"
-            android:title="@string/SwitchPreference" />
+            android:key="linea"
+            android:title="@string/SwitchPreference"/>
 
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="listado"
             android:entries="@array/tipos_visualizacion"
             android:entryValues="@array/valores_visualizacion"
-            android:key="list_preference_1"
-            android:title="@string/ListPreference" />
+            android:key="tipo_visualizacion"
+            android:title="@string/ListPreference"/>
 
     </PreferenceCategory>
+
 </PreferenceScreen>
