@@ -38,6 +38,6 @@
     <fragment
         android:id="@+id/juegoBanderasFragment"
         android:name="com.rdc.paises.JuegoBanderasFragment"
-        android:label="fragment_juego_banderas"
+        android:label="@string/juego"
         tools:layout="@layout/fragment_juego_banderas" />
 </navigation>

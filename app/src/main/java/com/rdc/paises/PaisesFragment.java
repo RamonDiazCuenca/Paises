@@ -15,9 +15,9 @@ import android.widget.LinearLayout;
 
 import com.rdc.paises.placeholder.PlaceholderContent;
 
-/**
- * A fragment representing a list of Items.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class PaisesFragment extends Fragment {
 
     // TODO: Customize parameter argument names
@@ -25,10 +25,10 @@ public class PaisesFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    ArrayList<Bandera> banderas; /* Hacemos referencia al arraylist banderas, donde se encuentran
+                                 las imágenes y sus nombres*/
+    List<PlaceholderContent.Pais> pais;
+
     public PaisesFragment() {
     }
 
@@ -86,8 +86,27 @@ public class PaisesFragment extends Fragment {
             PlaceholderContent placeholderContent = new PlaceholderContent(getResources(),
                     getContext().getPackageName());
 
-            recyclerView.setAdapter(new PaisRecyclerViewAdapter(PlaceholderContent.PAISES));
+            // Inicializamos el arraylist y llamamos al método añadirBanderas
+            banderas = new ArrayList<>();
+            añadirBanderas();
+
+            pais = new ArrayList<>();
+            //PaisRecyclerViewAdapter adapter = new PaisRecyclerViewAdapter(pais,banderas);
+            //recyclerView.setAdapter(adapter);
+
+            recyclerView.setAdapter(new PaisRecyclerViewAdapter(PlaceholderContent.PAISES, banderas));
         }
         return view;
+    }
+
+    // Método para añadir en el arraylist la imágen de la bandera y su nombre
+    private void añadirBanderas() {
+
+        banderas.add(new Bandera(R.drawable.bandera_argentina,"Argentina"));
+        banderas.add(new Bandera(R.drawable.bandera_australia,"Australia"));
+        banderas.add(new Bandera(R.drawable.bandera_belgica,"Bélgica"));
+        banderas.add(new Bandera(R.drawable.bandera_canada,"Canadá"));
+        banderas.add(new Bandera(R.drawable.bandera_dinamarca, "Dinamarca"));
+        banderas.add(new Bandera(R.drawable.bandera_espana, "España"));
     }
 }
